@@ -55,51 +55,6 @@ function updateActiveNavLink() {
 }
 
 // ==============================
-// TYPED TEXT ANIMATION
-// ==============================
-const phrases = [
-    'Network Technical Leader',
-    'Protocol Testing Expert',
-    'Python Automation Engineer',
-    'BGP/MPLS Specialist',
-    'AI-Driven Tester'
-];
-
-let phraseIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-const typedEl = document.getElementById('typed-text');
-
-function typeText() {
-    const currentPhrase = phrases[phraseIndex];
-
-    if (isDeleting) {
-        charIndex--;
-        typedEl.textContent = currentPhrase.substring(0, charIndex);
-
-        if (charIndex === 0) {
-            isDeleting = false;
-            phraseIndex = (phraseIndex + 1) % phrases.length;
-            setTimeout(typeText, 400);
-            return;
-        }
-        setTimeout(typeText, 50);
-    } else {
-        charIndex++;
-        typedEl.textContent = currentPhrase.substring(0, charIndex);
-
-        if (charIndex === currentPhrase.length) {
-            isDeleting = true;
-            setTimeout(typeText, 2000);
-            return;
-        }
-        setTimeout(typeText, 80);
-    }
-}
-
-setTimeout(typeText, 1200);
-
-// ==============================
 // COUNTER ANIMATION
 // ==============================
 function animateCounter(el) {
