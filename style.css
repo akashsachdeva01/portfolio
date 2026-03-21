@@ -804,11 +804,9 @@ ul {
    PROJECTS
    =========================== */
 .projects-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  max-width: 900px;
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
 }
 
 .project-card {
@@ -875,11 +873,9 @@ ul {
    WHY ME
    =========================== */
 .whyme-grid {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 24px;
-  max-width: 800px;
-  margin: 0 auto;
 }
 
 .whyme-card {
